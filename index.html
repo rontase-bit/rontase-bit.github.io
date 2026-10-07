@@ -1,74 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Erion Tase — Production Support Specialist</title>
-  <meta name="description" content="Resume website for Erion Tase, Production Support Specialist" />
-  <link rel="stylesheet" href="style.css" />
+
+  <meta name="description" content="Professional portfolio of Erion Tase covering manufacturing, Lean Six Sigma, engineering support, process improvement, AI/ML, IoT, projects, research, and professional experience.">
+  <meta name="author" content="Erion Tase">
+  <meta name="theme-color" content="#0b1220">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Erion Tase — Production Support Specialist">
+  <meta property="og:description" content="Professional portfolio covering manufacturing, engineering support, process improvement, AI/ML, IoT, projects, research, and experience.">
+  <meta property="og:url" content="https://rontase-bit.github.io/">
+
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="https://rontase-bit.github.io/">
+  <link rel="preload" as="image" href="./profile.webp" type="image/webp">
+  <link rel="stylesheet" href="./style.css?v=20261007">
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <nav class="nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#highlights">Highlights</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
-    </nav>
+    <div class="nav-shell">
+      <a class="brand" href="#about" aria-label="Erion Tase home">
+        <span class="brand-mark">ET</span>
+        <span>Erion Tase</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" type="button"
+              aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-toggle" type="button"
+                aria-label="Toggle color theme" aria-pressed="false">◐</button>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="about" class="section hero">
+  <main id="main-content">
+    <!-- ABOUT / HERO -->
+    <section id="about" class="section hero" aria-labelledby="about-title">
       <div class="hero-grid">
-        <picture>
-          <source srcset="profile.webp" type="image/webp">
+        <picture class="profile-wrap">
+          <!-- Keep both files in the repository root. WebP is used when supported; JPG is the fallback. -->
+          <source src="./profile.webp" type="image/webp">
           <img
-            src="profile.jpg"
-            alt="Headshot of Erion Tase"
+            src="./profile.jpg"
+            alt="Professional headshot of Erion Tase"
             class="avatar"
-            width="170" height="170"
+            width="180"
+            height="180"
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            onerror="this.style.display='none'"
-          />
+          >
         </picture>
+
         <div class="hero-content">
-          <h1>Erion Tase</h1>
-          <p class="subtitle"> Production Support Specialist</p>
+          <p class="eyebrow">Engineering • Manufacturing • Technology</p>
+          <h1 id="about-title">Erion Tase</h1>
+          <p class="subtitle">Production Support Specialist</p>
+
           <p class="summary">
-            Results-driven Production Support Specialist with 10+ years of hands-on experience in
-            high-precision medical device manufacturing (MRI coils, PCBA, RF circuits). Proven track record
-            implementing Lean/Six Sigma methodologies, driving process improvements, reducing defects, and
-            leading cross-functional teams of 40+ personnel. Combines a strong engineering foundation with
-            leadership experience and digital/IoT project expertise.
+            Results-driven Production Support Specialist with 10+ years of hands-on
+            experience in high-precision medical device manufacturing, including MRI coils,
+            PCBA, and RF circuits. Experienced in Lean/Six Sigma process improvement,
+            defect reduction, manufacturing support, cross-functional collaboration, and
+            team leadership. Combines an engineering foundation with leadership experience
+            and digital/IoT project expertise.
           </p>
 
-          <div class="quick-actions">
+          <div class="quick-actions" aria-label="Quick actions">
             <a class="btn primary" href="mailto:ron.tase@gmail.com">Email Me</a>
             <a class="btn" href="#contact">Contact Info</a>
-            <button class="btn" onclick="window.print()">Print Page to PDF</button>
-
-            <!-- Resume PDF lives in the same folder as index.html -->
-            <a class="btn"
-               href="Erion_Tase_Resume.pdf"
-               target="_blank" rel="noopener">View Resume</a>
-            <a class="btn"
-               href="Erion_Tase_Resume.pdf"
-               download>Download Resume</a>
+            <button class="btn" type="button" id="printButton">Print / Save PDF</button>
+            <a class="btn" href="articles/Erion_Tase_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+            <a class="btn" href="articles/Erion_Tase_Resume.pdf" download>Download Resume</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section id="highlights" class="section">
-      <h2>Core Competencies</h2>
+    <!-- CORE COMPETENCIES -->
+    <section id="highlights" class="section" aria-labelledby="highlights-title">
+      <div class="section-heading">
+        <p class="section-kicker">Capabilities</p>
+        <h2 id="highlights-title">Core Competencies</h2>
+      </div>
+
       <ul class="chip-list" role="list">
         <li class="chip">Lean / Six Sigma Process Improvement</li>
         <li class="chip">PCBA &amp; RF Coil Manufacturing</li>
@@ -90,206 +123,467 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <h2>Professional Experience</h2>
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="section-kicker">Career</p>
+        <h2 id="experience-title">Professional Experience</h2>
+      </div>
 
-      <article class="card">
-        <header class="card-header">
-          <h3>Production Support Specialist</h3>
-          <div class="meta">
-            <span class="company">GE Healthcare Coils</span>
+      <div class="timeline">
+        <article class="card timeline-item">
+          <header class="card-header">
+            <div>
+              <h3>Production Support Specialist</h3>
+              <p class="company">GE Healthcare Coils</p>
+            </div>
             <span class="dates">Aug 2023 – Present</span>
-          </div>
-        </header>
-        <ul class="bullets">
-          <li>Lead new product introductions (NPI) into work centers, developing hands-on and classroom training programs for manufacturing personnel.</li>
-          <li>Participate in Pilot Production Teams and kaizen events — identify training gaps, develop process flows, and implement specialized tooling.</li>
-          <li>Drive Lean-based process improvements to enhance quality and productivity; monitor, investigate, and resolve defects in collaboration with the quality team.</li>
-          <li>Maintain manufacturing documentation currency, implementing ECO changes and supporting testing equipment to sustain uninterrupted production flow.</li>
-          <li>Ensure QA procedures and safety standards are consistently applied across assigned product areas, proactively resolving all resource and environment issues.</li>
-        </ul>
-      </article>
+          </header>
+          <ul class="bullets">
+            <li>Lead new product introductions (NPI) into work centers, developing hands-on and classroom training programs for manufacturing personnel.</li>
+            <li>Participate in pilot production teams and kaizen events; identify training gaps, develop process flows, and implement specialized tooling.</li>
+            <li>Drive Lean-based process improvements to enhance quality and productivity; monitor, investigate, and resolve defects in collaboration with the quality team.</li>
+            <li>Maintain manufacturing documentation currency, implement ECO changes, and support testing equipment to sustain production flow.</li>
+            <li>Ensure QA procedures and safety standards are consistently applied across assigned product areas.</li>
+          </ul>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
-          <h3>Team Leader</h3>
-          <div class="meta">
-            <span class="company">GE Healthcare Coils</span>
+        <article class="card timeline-item">
+          <header class="card-header">
+            <div>
+              <h3>Team Leader</h3>
+              <p class="company">GE Healthcare Coils</p>
+            </div>
             <span class="dates">Jan 2020 – Jul 2023</span>
-          </div>
-        </header>
-        <ul class="bullets">
-          <li>Supervised 40+ team members across assembly, tuning, and inspection lines for high-precision MRI coil products.</li>
-          <li>Partnered with material and engineering teams to maintain production schedules; coordinated daily activities using multiple ERP/database platforms.</li>
-          <li>Interfaced with management to design and execute Lean action workouts, reducing waste and improving throughput.</li>
-          <li>Redesigned part stock management system, converting disorganized stockpile into a structured inventory that reduced retrieval time and material cost.</li>
-          <li>Evaluated and supported engineering models for design improvements, prototypes, and service workflows.</li>
-        </ul>
-      </article>
+          </header>
+          <ul class="bullets">
+            <li>Supervised 40+ team members across assembly, tuning, and inspection lines for high-precision MRI coil products.</li>
+            <li>Partnered with material and engineering teams to maintain production schedules using multiple ERP/database platforms.</li>
+            <li>Interfaced with management to design and execute Lean action workouts, reducing waste and improving throughput.</li>
+            <li>Redesigned part stock management into a structured inventory process that reduced retrieval time and material cost.</li>
+            <li>Evaluated and supported engineering models for design improvements, prototypes, and service workflows.</li>
+          </ul>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
-          <h3>Manufacturing Technician</h3>
-          <div class="meta">
-            <span class="company">GE Healthcare Coils</span>
+        <article class="card timeline-item">
+          <header class="card-header">
+            <div>
+              <h3>Manufacturing Technician</h3>
+              <p class="company">GE Healthcare Coils</p>
+            </div>
             <span class="dates">Dec 2018 – Dec 2020</span>
-          </div>
-        </header>
-        <ul class="bullets">
-          <li>Tested RF circuit boards (assemblies and sub-assemblies) for operational compliance with performance specifications.</li>
-          <li>Tuned analog/digital MRI coils and subassemblies per detailed manufacturing instructions.</li>
-          <li>Performed root cause analysis on RF coil failures and simulation equipment irregularities; presented findings and corrective actions to engineering team.</li>
-          <li>Conducted controlled experiments, adjusted variables, and recorded diagnostic data to support continuous improvement initiatives.</li>
-        </ul>
-      </article>
+          </header>
+          <ul class="bullets">
+            <li>Tested RF circuit boards and subassemblies for operational compliance with performance specifications.</li>
+            <li>Tuned analog/digital MRI coils and subassemblies according to detailed manufacturing instructions.</li>
+            <li>Performed root cause analysis on RF coil failures and simulation equipment irregularities; presented findings and corrective actions to engineering.</li>
+            <li>Conducted controlled experiments, adjusted variables, and recorded diagnostic data to support continuous improvement initiatives.</li>
+          </ul>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
-          <h3>Geek Squad Manager</h3>
-          <div class="meta">
-            <span class="company">Best Buy</span>
+        <article class="card timeline-item">
+          <header class="card-header">
+            <div>
+              <h3>Geek Squad Manager</h3>
+              <p class="company">Best Buy</p>
+            </div>
             <span class="dates">Oct 2009 – Jun 2018</span>
-          </div>
-        </header>
-        <ul class="bullets">
-          <li>Managed IT product sales and repair operations for a top-performing store location; led a team of 50+ staff across split shifts.</li>
-          <li>Grew closing ratio from 15% to 25% through targeted coaching, process refinement, and staff development.</li>
-          <li>Sustained 110%+ profitability targets month-over-month by motivating team performance and optimizing operational standards.</li>
-        </ul>
-      </article>
+          </header>
+          <ul class="bullets">
+            <li>Managed IT product sales and repair operations; led a team of 50+ staff across split shifts.</li>
+            <li>Improved closing ratio from 15% to 25% through targeted coaching, process refinement, and staff development.</li>
+            <li>Sustained 110%+ profitability targets month-over-month through team development and operational standards.</li>
+          </ul>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
-          <h3>Retail General Manager</h3>
-          <div class="meta">
-            <span class="company">Neptun Electronics</span>
+        <article class="card timeline-item">
+          <header class="card-header">
+            <div>
+              <h3>Retail General Manager</h3>
+              <p class="company">Neptun Electronics</p>
+            </div>
             <span class="dates">Sep 2007 – Sep 2009</span>
-          </div>
-        </header>
-        <ul class="bullets">
-          <li>Directed operations for a 100+ person retail organization; evaluated performance, productivity, and customer satisfaction metrics.</li>
-          <li>Managed monthly P&amp;L, budget planning, financial reporting, and inventory/financial record control.</li>
-        </ul>
-      </article>
+          </header>
+          <ul class="bullets">
+            <li>Directed operations for a 100+ person retail organization; evaluated performance, productivity, and customer satisfaction metrics.</li>
+            <li>Managed monthly P&amp;L, budget planning, financial reporting, and inventory/financial record control.</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Engineering &amp; IT Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="project1.jpg" alt="IoT Door Sensor System"
-               loading="lazy" decoding="async"
-               onerror="this.style.display='none'" />
-          <h3>IoT Door Sensor System</h3>
-          <p>Designed and deployed an IoT door sensor system using Arduino and Tinkercad, sending real-time
-             notifications to management smartphones. Integrated temperature/humidity monitoring, automated
-             lighting, and flood-level alerts via a ThingSpeak dashboard with MATLAB data feeds.</p>
-          <ul class="tags"><li>Arduino</li><li>IoT</li><li>ThingSpeak</li><li>MATLAB</li></ul>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="section-kicker">Selected Work</p>
+        <h2 id="projects-title">Engineering &amp; IT Projects</h2>
+      </div>
+
+      <div class="grid two-col">
+        <article class="card project-card">
+          <img src="project1.jpg" alt="IoT Door Sensor System" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>IoT Door Sensor System</h3>
+            <p>
+              Designed and deployed an IoT door sensor system using Arduino and Tinkercad,
+              sending real-time notifications to management smartphones. Integrated
+              temperature/humidity monitoring, automated lighting, and flood-level alerts
+              via a ThingSpeak dashboard with MATLAB data feeds.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Arduino</li><li>IoT</li><li>ThingSpeak</li><li>MATLAB</li>
+            </ul>
+          </div>
         </article>
 
-        <article class="card">
-          <img src="project2.jpg" alt="AI/ML Product Rating Prediction Model"
-               loading="lazy" decoding="async"
-               onerror="this.style.display='none'" />
-          <h3>Product Rating Prediction Model</h3>
-          <p>Developed a consumer product rating prediction model using AI/ML techniques (Python, R, SQL),
-             demonstrating practical application of machine learning in a data science pipeline.</p>
-          <ul class="tags"><li>Python</li><li>R</li><li>SQL</li><li>Machine Learning</li></ul>
+        <article class="card project-card">
+          <img src="project2.jpg" alt="AI and machine learning product rating prediction model" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Product Rating Prediction Model</h3>
+            <p>
+              Developed a consumer product rating prediction model using AI/ML techniques
+              with Python, R, and SQL, demonstrating practical application of machine
+              learning in a data science pipeline.
+            </p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Python</li><li>R</li><li>SQL</li><li>Machine Learning</li>
+            </ul>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS / RESEARCH -->
+    <section id="research" class="section" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p class="section-kicker">Publications</p>
+        <h2 id="research-title">Research &amp; Articles</h2>
+        <p>
+          Research, technical articles, case studies, and professional insights focused
+          on manufacturing, engineering, process improvement, data, AI/ML, and technology.
+        </p>
+      </div>
+
+      <div class="research-grid">
+
+        <!-- ARTICLE 01 -->
+        <article class="research-card">
+          <div class="article-number">01</div>
+          <p class="publication-type">Professional Article</p>
+          <h3>Lean Six Sigma in Manufacturing</h3>
+          <p>
+            A practical discussion of Lean Six Sigma principles, waste reduction,
+            root-cause analysis, continuous improvement, and their application to
+            manufacturing operations.
+          </p>
+          <div class="research-tags" aria-label="Topics">
+            <span>Lean</span><span>Six Sigma</span><span>Manufacturing</span>
+          </div>
+          <a class="article-link" href="articles/research-article-1.html">
+            Read Article <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- ARTICLE 02 -->
+        <article class="research-card">
+          <div class="article-number">02</div>
+          <p class="publication-type">Academic Paper</p>
+          <h3>Implementing AI and Centralized Data Systems in Albania</h3>
+          <p>
+            An academic paper analyzing the impact of Artificial Intelligence and
+            centralized official data systems on tourism and vehicle-rental SMEs in Albania.
+          </p>
+          <div class="research-tags" aria-label="Topics">
+            <span>Artificial Intelligence</span><span>Smart Tourism</span><span>Data Systems</span>
+          </div>
+          <a class="article-link" href="articles/research-article-2.html">
+            Read Article <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- ARTICLE 03 -->
+        <article class="research-card">
+          <div class="article-number">03</div>
+          <p class="publication-type">Academic Article</p>
+          <h3>AI and Continuous Improvement in Manufacturing</h3>
+          <p>
+            An academic analysis of AI-assisted process improvement, Fishbone analysis,
+            Lean Six Sigma, waste reduction, root-cause analysis, and the role of human
+            critical thinking in manufacturing.
+          </p>
+          <div class="research-tags" aria-label="Topics">
+            <span>AI</span><span>Lean Six Sigma</span><span>Manufacturing</span>
+          </div>
+          <a class="article-link" href="articles/research-article-3.html">
+            Read Article <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- ARTICLE 04 -->
+        <article class="research-card">
+          <div class="article-number">04</div>
+          <p class="publication-type">Academic Policy Framework</p>
+          <h3>Albania AI 2035 Technology Export Powerhouse</h3>
+          <p>
+            An academic policy framework examining artificial intelligence, innovation,
+            talent development, regional innovation centers, technology exports,
+            governance, and Albania's pathway toward a competitive AI ecosystem by 2035.
+          </p>
+          <div class="research-tags" aria-label="Topics">
+            <span>Artificial Intelligence</span>
+            <span>Innovation</span>
+            <span>Technology Exports</span>
+            <span>AI Governance</span>
+          </div>
+          <a class="article-link" href="research-article-4.html">
+    Read Article <span aria-hidden="true">→</span>
+</a>
+            Read Article <span aria-hidden="true">→</span>
+          </a>
+        </article>
+        <!-- ARTICLE 05 -->
+        <article class="research-card">
+          <div class="article-number">05</div>
+          <p class="publication-type">Research <Article></Article></p>
+          <h3>Albania_Technological
+            _Tourism_Article</h3>
+          <p>
+            An An implementation framework for connectivity, 
+            real-time visitor feedback, artificial intelligence, 
+            and long-term tourism sustainability.
+          </p>
+          <div class="research-tags" aria-label="Topics">
+            <span>Artificial Intelligence</span>
+            <span>Innovation</span>
+            <span>Technology Exports</span>
+            <span>AI Governance</span>
+          </div>
+          <a class="article-link" href="research-article-5.html">
+    Read Article <span aria-hidden="true">→</span>
+</a>
+            Read Article <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
       </div>
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="section">
-      <h2>Education &amp; Certifications</h2>
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="section-heading">
+        <p class="section-kicker">Education</p>
+        <h2 id="education-title">Education &amp; Certifications</h2>
+      </div>
 
-      <article class="card">
-        <header class="card-header">
+      <div class="education-grid">
+        <article class="card">
           <h3>Bachelor of Science, Engineering Technology</h3>
-          <div class="meta">
-            <span class="company">DeVry University</span>
-            <span class="dates">Mar 2023</span>
-          </div>
-        </header>
-      </article>
+          <div class="meta"><span class="company">DeVry University</span><span class="dates">Mar 2023</span></div>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
+        <article class="card">
           <h3>Lean Six Sigma Certificate</h3>
-          <div class="meta">
-            <span class="company">GE Healthcare</span>
-            <span class="dates">Jan 2020</span>
-          </div>
-        </header>
-      </article>
+          <div class="meta"><span class="company">GE Healthcare</span><span class="dates">Jan 2020</span></div>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
+        <article class="card">
           <h3>MBA, Information Systems</h3>
-          <div class="meta">
-            <span class="company">IUKB, Switzerland</span>
-            <span class="dates">Sep 2009</span>
-          </div>
-        </header>
-      </article>
+          <div class="meta"><span class="company">IUKB, Switzerland</span><span class="dates">Sep 2009</span></div>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
+        <article class="card">
           <h3>Bachelor of Science, Management</h3>
-          <div class="meta">
-            <span class="company">IWU, Indiana</span>
-            <span class="dates">Sep 2007</span>
-          </div>
-        </header>
-      </article>
+          <div class="meta"><span class="company">IWU, Indiana</span><span class="dates">Sep 2007</span></div>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
+        <article class="card">
           <h3>Associate of Science, Electrical/Electronic Engineering Technology</h3>
-          <div class="meta">
-            <span class="company">Tri-C</span>
-            <span class="dates">Jun 2006</span>
-          </div>
-        </header>
-      </article>
+          <div class="meta"><span class="company">Tri-C</span><span class="dates">Jun 2006</span></div>
+        </article>
 
-      <article class="card">
-        <header class="card-header">
+        <article class="card">
           <h3>A+, Dell Certified &amp; PC Maintenance Certificate</h3>
-        </header>
-      </article>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div>
-          <p><strong>Email:</strong> <a href="mailto:ron.tase@gmail.com">ron.tase@gmail.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+19048649213">(904) 864-9213</a></p>
-          <p><strong>Location:</strong> Rocky River, OH 44116 (open to hybrid/remote)</p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/erion-tase-669a0a21" target="_blank" rel="noopener">linkedin.com/in/erion-tase-669a0a21</a></p>
-        </div>
-        <!-- Optional Formspree form. Replace your-id -->
-        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
-          <label> Your Name <input name="name" type="text" required> </label>
-          <label> Your Email <input name="email" type="email" required> </label>
-          <label> Message <textarea name="message" rows="4" required></textarea> </label>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="form-note">Replace the action URL with your own Formspree endpoint.</p>
-        </form>
+          <h3>Certified IPC Specialist  IPC-A-610 &amp; Certified IPC Specialist IPC/WHMA-A-620</h3>
+        </article>
+             </article>
       </div>
     </section>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+    <section
+      id="contact"
+      class="section contact-section"
+      aria-labelledby="contact-title">
+
+      <div class="section-heading">
+        <p class="section-kicker">GET IN TOUCH</p>
+        <h2 id="contact-title">Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-card contact-information">
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:ron.tase@gmail.com">ron.tase@gmail.com</a>
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+19048649213">(904) 864-9213</a>
+          </p>
+
+          <p>
+            <strong>Location:</strong>
+            Rocky River, OH 44116
+            <span class="contact-note">(open to hybrid/remote)</span>
+          </p>
+
+          <p>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/erion-tase-669a0a21/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn Profile
+            </a>
+          </p>
+
+        </div>
+
+        <!-- FORMSPREE CONTACT FORM -->
+        <div class="contact-card">
+
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/xnpnzzoq"
+            method="POST"
+            accept-charset="UTF-8">
+
+            <!-- NAME -->
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                data-fs-field
+                required>
+              <span data-fs-error="name" class="field-error"></span>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+              <label for="contact-email">Your Email</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                data-fs-field
+                required>
+              <span data-fs-error="email" class="field-error"></span>
+            </div>
+
+            <!-- SUBJECT -->
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <select
+                id="contact-subject"
+                name="subject"
+                data-fs-field
+                required>
+                <option value="" selected disabled>Select a subject</option>
+                <option value="Professional Inquiry">Professional Inquiry</option>
+                <option value="Research Collaboration">Research Collaboration</option>
+                <option value="Manufacturing / Engineering">Manufacturing / Engineering</option>
+                <option value="Artificial Intelligence / Technology">Artificial Intelligence / Technology</option>
+                <option value="Career Opportunity">Career Opportunity</option>
+                <option value="Other">Other</option>
+              </select>
+              <span data-fs-error="subject" class="field-error"></span>
+            </div>
+
+            <!-- MESSAGE -->
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="7"
+                placeholder="Please enter your message..."
+                data-fs-field
+                required></textarea>
+              <span data-fs-error="message" class="field-error"></span>
+            </div>
+
+            <!-- PORTFOLIO SOURCE -->
+            <input type="hidden" name="_source" value="Erion Tase Professional Portfolio">
+
+            <!-- SPAM PROTECTION -->
+            <input
+              type="text"
+              name="_gotcha"
+              class="form-honeypot"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true">
+
+            <!-- SUCCESS MESSAGE -->
+            <div class="contact-status" data-fs-success role="status" aria-live="polite">
+              Thank you. Your message has been sent successfully.
+            </div>
+
+            <!-- ERROR MESSAGE -->
+            <div class="contact-status" data-fs-error role="alert" aria-live="assertive"></div>
+
+            <!-- SUBMIT -->
+            <button id="submitButton" class="btn primary" type="submit" data-fs-submit-btn>
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Erion Tase — All rights reserved.</p>
   </footer>
 
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-  <!-- Defer = runs after HTML is parsed -->
+  <!-- =====================================================
+       FORMSPREE AJAX
+       ===================================================== -->
+  <script>
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+
+    formspree("initForm", {
+      formElement: "#contact-form",
+      formId: "xnpnzzoq"
+    });
+  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
   <script defer src="script.js"></script>
+
 </body>
 </html>
